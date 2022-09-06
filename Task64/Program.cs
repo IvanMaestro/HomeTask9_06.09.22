@@ -12,10 +12,7 @@ void PrintNToOne(int num)
 {    
     Console.Write($"{num}, ");
     if (num < 1) PrintNToOne(num+1);
-    else if (num > 1)
-    {
-        PrintNToOne(num-1);        
-    }  
+    else if (num > 1) PrintNToOne(num-1);      
 }
 Console.Write("Числа от N до 1: ");
 PrintNToOne(n);
