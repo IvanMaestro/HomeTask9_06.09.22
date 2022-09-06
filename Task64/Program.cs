@@ -5,5 +5,18 @@
 // N = 5 -> "5, 4, 3, 2, 1"
 // N = 8 -> "8, 7, 6, 5, 4, 3, 2, 1"
 
+Console.Write("Введите значение N: ");
+int n = Convert.ToInt32(Console.ReadLine());
 
+void PrintNToOne(int num)
+{    
+    Console.Write($"{num}, ");
+    if (num < 1) PrintNToOne(num+1);
+    else if (num > 1)
+    {
+        PrintNToOne(num-1);        
+    }  
+}
+Console.Write("Числа от N до 1: ");
+PrintNToOne(n);
 
